@@ -1,0 +1,37 @@
+.page-title{
+    color: get-color(cta);
+}
+
+.go-c-article-header{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    margin-bottom: 1em;
+    background-blend-mode: overlay;
+    background-color: rgba( $primary-color, .95  );
+    color: white;    
+    
+}
+
+.go-c-description{
+    padding: 1.2em;
+    font-family: $raleway;
+    font-weight: bold;
+    
+    @include breakpoint( medium ){
+        padding-left: 10%;
+    }
+    
+    .js-go-link-to-full{
+        background-color: rgba( $white, 0.7 );
+        padding: 0 .5em;        
+    }
+    
+}
+
+.js-go-artwork__scrollspy{
+    padding-top: 3em;
+
+    
+}

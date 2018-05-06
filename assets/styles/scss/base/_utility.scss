@@ -1,0 +1,90 @@
+/*
+ * Utility Classes
+ *
+ * These are helpful, single (or limited) purpose, classes 
+ * usually created for the styles you apply the most.
+ * You can include them in your markup or use @extend to 
+ * extend them to various components in your CSS.
+ *
+ * NOTE: Utility classes are always prefixed with `go-u-`. 
+ */
+
+
+// Spacing
+// --------------------------------------- /
+.go-u-mt-nudge { margin-top: $spacer/3 !important; }
+.go-u-mb-nudge { margin-bottom: $spacer/3 !important; }
+.go-u-ml-nudge { margin-left: $spacer/3 !important; }
+.go-u-mr-nudge { margin-right: $spacer/3 !important; }
+.go-u-my-nudge { margin-top: $spacer/3 !important; margin-bottom: $spacer/3 !important; }
+.go-u-pt-nudge { padding-top: $spacer/3 !important; }
+.go-u-pb-nudge { padding-bottom: $spacer/3 !important; }
+.go-u-pr-nudge { padding-right: $spacer/3 !important; }
+.go-u-pl-nudge { padding-left: $spacer/3 !important; }
+.go-u-py-nudge { padding-top: $spacer/3 !important; padding-bottom: $spacer/3 !important; }
+@for $i from 0 through 6 {
+    $val: $spacer * $i;
+    .go-u-ma-#{$i} { margin: $val !important; }
+    .go-u-mt-#{$i} { margin-top: $val !important; }
+    .go-u-mr-#{$i} { margin-right: $val !important; }
+    .go-u-mb-#{$i} { margin-bottom: $val !important; }
+    .go-u-ml-#{$i} { margin-left: $val !important; }
+    .go-u-mx-#{$i} { margin-left: $val !important; margin-right: $val !important; }
+    .go-u-my-#{$i} { margin-top: $val !important; margin-bottom: $val !important; }
+    .go-u-pa-#{$i} { padding: $val !important; }
+    .go-u-pt-#{$i} { padding-top: $val !important; }
+    .go-u-pr-#{$i} { padding-right: $val !important; }
+    .go-u-pb-#{$i} { padding-bottom: $val !important; }
+    .go-u-pl-#{$i} { padding-left: $val !important; }
+    .go-u-px-#{$i} { padding-left: $val !important; padding-right: $val !important; }
+    .go-u-py-#{$i} { padding-top: $val !important; padding-bottom: $val !important; }
+}
+
+
+// Typography
+// --------------------------------------- /
+.go-u-weight-light { font-weight: 300 !important; }
+.go-u-weight-normal { font-weight: 400 !important; }
+.go-u-weight-medium { font-weight: 500 !important; }
+.go-u-weight-bold { font-weight: 700 !important; }
+.go-u-caps { text-transform: uppercase !important; }
+.go-u-font-size-sm { font-size: 75% !important; }
+.go-u-font-size-lg { font-size: 125% !important; }
+.go-u-font-size-xl { font-size: 150% !important; }
+.go-u-text-left { text-align: left !important; }
+.go-u-text-center { text-align: center !important; }
+.go-u-text-right { text-align: right !important; }
+
+
+// Lists
+// ------------------------------------------ /
+.go-u-clean-list {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+
+
+.go-u-faded { 
+	opacity: $faded;
+}
+
+
+
+// Display
+// ------------------------------------------ /
+.go-u-display-block { display: block !important; }
+.go-u-display-none { display: none !important; }
+.go-u-display-inline { display: inline !important; }
+.go-u-display-inline-block { display: inline-block !important; }
+
+// Effects
+// ------------------------------------------ /
+.go-u-transition {
+	transition: all $duration $easing;
+}
+.go-u-transition-short {
+	transition: all $duration-short $easing;
+}
+.go-u-transition-long {
+	transition: all $duration-long $easing;
+}

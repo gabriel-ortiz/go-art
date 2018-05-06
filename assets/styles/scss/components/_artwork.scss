@@ -1,0 +1,161 @@
+/***************************************
+*
+*Components for artwork page
+*
+*
+**************************************/
+
+.js-go-satsang-grid{
+    box-sizing: border-box;
+}
+
+.go-c-artwork{
+    margin: auto;
+}
+
+.go-c-artwork__preview-grid,
+.go-c-preview-grid:active,
+.go-c-preview-grid:visited
+{
+    //height: 136px;
+    //width: 136px;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center;
+    transition: all .2s ease;
+    box-sizing: border-box;
+    
+    &:before{
+        content: "";
+        display: block;
+        padding-top: 100%;
+        float: left;        
+    }
+    
+    &:hover,
+    &:focus{
+        transform: scale(1.02);
+        border: 1px solid get-color(secondary);
+        box-shadow: $box-shadow-bottom;
+    }
+
+}
+
+.go-c-artwork__article-header{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    margin-bottom: 1em;
+    background-blend-mode: overlay;
+    background-color: rgba( $primary-color, .95  );
+    color: white;
+    min-height: 15rem;   
+    
+}
+
+.go-c-artwork__page-description{
+    padding: 1.2em;
+    font-family: $raleway;
+    font-weight: bold;
+    
+    @include breakpoint( medium ){
+        padding-left: 10%;
+    }
+    
+    .js-go-link-to-full{
+        background-color: rgba( get-color(accent), 0.7 );
+        padding: 0 .5em;
+        color: white;
+    }
+    
+}
+
+.js-go-artwork__scrollspy{
+    padding-top: 3em;
+
+    
+}
+
+.go-c-artwork__image{
+    text-align: center;
+    
+    & > img{
+        border: 2px solid $secondary-color;
+        box-sizing: border-box;
+        
+    }
+}
+
+.go-c-artwork__content{
+    box-sizing: border-box;
+    padding: 1em;
+    
+    h3 {
+        color: get-color(secondary);
+    }
+    
+    @include breakpoint( medium ){
+        padding: 0 0 0 1.3em;        
+    }
+
+    & > p{
+
+        display: inline-block;
+        font-size: $small-font-size;
+        
+        &:first-of-type:after {
+            content: "|";
+            display: inline-block;
+            margin:  0em .5em;
+        }
+        
+        &:last-of-type {
+            display: block;
+            margin:  0;
+            width: 100%;
+        }        
+        
+        @include breakpoint( medium ){
+            padding-left: 15%;
+            display: block;
+            
+            &:first-of-type:after {
+                content: "";
+                display: inline-block;
+                margin:  0;
+            }
+            
+        }
+    }
+}
+
+.go-c-artwork__desc{
+    background-color: $light-gray;
+    box-sizing: border-box;
+    padding: .5em;
+    font-size: $small-font-size;
+    font-family: $raleway;
+    
+    .go-c-artwork--top{
+        font-weight: 700;
+        
+        &:hover,
+        &:focus{
+            color: get-color(secondary);
+        }
+    }
+    
+    p {
+        @include breakpoint(large){
+            margin-left: 1em;
+        }
+    }
+}
+
+.entry-content{
+    padding: 3em .7em .7em .7em;
+    box-sizing: border-box;
+}
+

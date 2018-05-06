@@ -1,0 +1,67 @@
+//custom styles for theme menu
+
+.top-bar, .top-bar ul{
+    background-color: get-color(accent);   
+}
+
+.go-c-topnav{
+    
+    a {
+        padding: 0;
+        &:hover,
+        &:focus{
+            background-color: inherit !important;
+        }        
+    }
+
+    
+    .go-c-topnav__title{
+        padding: 0 1rem;
+    }    
+    
+}
+
+
+
+
+.menu a, 
+.menu button, 
+.menu input, 
+.menu select {
+    transition: $transition-speed;
+    
+    &:hover,
+    &:focus{
+        background-color: $medium-gray;
+    }
+    
+    &:active{
+        background-color: $dark-gray;
+    }
+    
+    
+}
+
+.menu .active>a, .menu .is-active>a{
+    transition: $transition-speed;
+    
+    &:hover,
+    &:focus{
+        background-color: $secondary-color;
+    }
+    
+}
+
+
+/************
+Off-canvas Styling
+*/
+
+.off-canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .go-c-off-canvas{
+        
+    }
+}

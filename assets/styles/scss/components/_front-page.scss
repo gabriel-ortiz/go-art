@@ -1,0 +1,90 @@
+/**
+Front page styling
+*/
+
+.go-c-off-canvas__site-title{
+    font-family: $header-font-family;
+    font-size: $lead-font-size;
+    text-align: center;
+    
+    a{
+        color: get-color(secondary);
+    }
+}
+
+.go-c-off-canvas__menu{
+    padding: .5em;
+    box-sizing: border-box;
+}
+
+//social media menu
+ul#menu-social-media-menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-size: $small-font-size;
+    margin: 0;
+    padding: 0;
+    
+    & > li{
+
+        padding: 0 1.5em;
+        box-sizing: border-box;
+        font-size: 1.5em;
+        
+        a{
+            transition: $transition-speed;
+            
+            &:hover,
+            &:focus{
+                color: get-color(secondary);
+            }
+        }
+    }
+}
+
+.go-fb-menu-icon{
+
+    &:before{
+        content: "\f304";
+    }
+}
+
+.go-c-front-page{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    box-sizing: border-box;
+    height: 85vh;
+    box-sizing: border-box;
+    
+      @include breakpoint(medium) {
+        padding-top: 2rem;
+      }    
+}
+
+.go-c-front-page__hero{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $secondary-color;
+    background-blend-mode: multiply;
+    background-position-y: 70%;
+    position: relative;
+}
+
+.go-c-front-page__content{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-family: $raleway;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: rgba($secondary-color , 0.5);
+    color: $white;
+
+    
+    @include breakpoint( medium ){
+        width: 40%;    
+    }
+}
