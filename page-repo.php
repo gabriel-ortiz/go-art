@@ -43,7 +43,7 @@ wp_reset_postdata();
 	</div>
 	<div class="off-canvas-content" data-off-canvas-content>
 		
-		<header class="header" role="header" sticky-container>
+		<header class="header go-c-header" role="header" sticky-container>
 			<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>			
 		</header>
 		  <!-- Your page content lives here -->

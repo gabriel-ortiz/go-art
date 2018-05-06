@@ -1,5 +1,12 @@
 //custom styles for theme menu
 
+.go-c-header{
+    
+    .sticky{
+       box-shadow: $box-shadow-header;
+    }
+}
+
 .top-bar, .top-bar ul{
     background-color: get-color(accent);   
 }

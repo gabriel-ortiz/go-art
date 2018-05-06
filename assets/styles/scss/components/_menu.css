@@ -1,24 +1,35 @@
 /*
-Error: Undefined variable: "$transition-speed".
-        on line 31 of /home/ubuntu/workspace/wp-content/themes/gabriel-ortiz/assets/styles/scss/components/_menu.scss
+Error: Undefined variable: "$box-shadow-header".
+        on line 6 of /home/ubuntu/workspace/wp-content/themes/gabriel-ortiz/assets/styles/scss/components/_menu.scss
 
-26: 
-27: .menu a, 
-28: .menu button, 
-29: .menu input, 
-30: .menu select {
-31:     transition: $transition-speed;
-32:     
-33:     &:hover,
-34:     &:focus{
-35:         background-color: $medium-gray;
-36:     }
+1: //custom styles for theme menu
+2: 
+3: .go-c-header{
+4:     
+5:     .sticky{
+6:        box-shadow: $box-shadow-header;
+7:     }
+8: }
+9: 
+10: .top-bar, .top-bar ul{
+11:     background-color: get-color(accent);   
 
 Backtrace:
-/home/ubuntu/workspace/wp-content/themes/gabriel-ortiz/assets/styles/scss/components/_menu.scss:31
+/home/ubuntu/workspace/wp-content/themes/gabriel-ortiz/assets/styles/scss/components/_menu.scss:6
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
@@ -65,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$transition-speed\".\A         on line 31 of /home/ubuntu/workspace/wp-content/themes/gabriel-ortiz/assets/styles/scss/components/_menu.scss\A \A 26: \A 27: .menu a, \A 28: .menu button, \A 29: .menu input, \A 30: .menu select {\A 31:     transition: $transition-speed;\A 32:     \A 33:     &:hover,\A 34:     &:focus{\A 35:         background-color: $medium-gray;\A 36:     }"; }
+  content: "Error: Undefined variable: \"$box-shadow-header\".\A         on line 6 of /home/ubuntu/workspace/wp-content/themes/gabriel-ortiz/assets/styles/scss/components/_menu.scss\A \A 1: //custom styles for theme menu\A 2: \A 3: .go-c-header{\A 4:     \A 5:     .sticky{\A 6:        box-shadow: $box-shadow-header;\A 7:     }\A 8: }\A 9: \A 10: .top-bar, .top-bar ul{\A 11:     background-color: get-color(accent);   "; }
