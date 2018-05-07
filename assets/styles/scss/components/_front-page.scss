@@ -15,6 +15,15 @@ Front page styling
 .go-c-off-canvas__menu{
     padding: .5em;
     box-sizing: border-box;
+    
+    .menu-item:not(.current-menu-item){
+        transition: $transition-speed;
+        
+        &:hover,
+        &:focus{
+            background-color: $medium-gray;
+        }
+    }
 }
 
 //social media menu
