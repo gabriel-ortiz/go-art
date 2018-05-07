@@ -5,9 +5,9 @@ function get_artwork_data(){
     $artwork_cat    = get_the_category();
     $artwork_term   = $artwork_cat[0]->slug;
     
-    // echo '<pre>';
-    // print_r( $artwork_cat );
-    // echo '</pre>';
+    echo '<pre>';
+    print_r( $artwork_cat );
+    echo '</pre>';
 
     $the_query = new WP_Query( array(
         'post_type' => 'artwork',
