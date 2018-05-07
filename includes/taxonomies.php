@@ -10,7 +10,7 @@ function setup() {
 		return __NAMESPACE__ . "\\$function";
 	};
 	// NOTE: Uncomment to activate taxonomy
-	//add_action( 'init', $n( 'register_taxonomy' ) );
+	add_action( 'init', $n( 'register_taxonomy' ) );
 }
 /**
  * Register the my_taxo taxonomy and assign it to posts.
@@ -18,7 +18,7 @@ function setup() {
  * See https://github.com/johnbillion/extended-taxos for more info on using the extended-taxos library
  */
 function register_taxonomy() {
-	$artwork_projects = register_extended_taxonomy( 'Artwork Projects', 'artwork' );
+	$artwork_projects = register_extended_taxonomy( 'artwork_project', array( 'page', 'artwork') );
 	
 	
 }

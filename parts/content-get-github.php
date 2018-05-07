@@ -33,6 +33,10 @@
         set_transient( 'github_data', $github_json,  20 * MINUTE_IN_SECONDS );
     }
     
+    echo '<pre>';
+    print_r( $github_json );
+    echo '</pre>';
+    
     return $github_json;
     
  }

@@ -43,7 +43,7 @@ function register_my_post_type() {
 								)
 	) );
 	
-	$artwork->add_taxonomy( 'artwork_project', array(
-		'show_ui'	=> true,
-	) );	
+	// $artwork->add_taxonomy( 'artwork_project', array(
+	// 	'show_ui'	=> true,
+	// ) );	
 }
