@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Github Repo
+ * Template Name: Github Repo Page
  */
 
 get_header(); ?>
