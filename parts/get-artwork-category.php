@@ -2,12 +2,13 @@
 
 function get_artwork_data(){
     //get the category assigned to the page
-    $artwork_cat    = get_the_category();
+    $id = get_the_ID();
+    $artwork_cat    = get_the_terms( $id, 'artwork_project');
     $artwork_term   = $artwork_cat[0]->slug;
     
-    echo '<pre>';
-    print_r( $artwork_cat );
-    echo '</pre>';
+    // echo '<pre>';
+    // print_r( $artwork_term );
+    // echo '</pre>';
 
     $the_query = new WP_Query( array(
         'post_type' => 'artwork',
@@ -26,8 +27,4 @@ function get_artwork_data(){
     
 }
 
-// while ( $the_query->have_posts() ) :
-//     $the_query->the_post();
-//     // Show Posts ...
-// endwhile;
 

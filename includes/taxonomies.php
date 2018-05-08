@@ -18,7 +18,14 @@ function setup() {
  * See https://github.com/johnbillion/extended-taxos for more info on using the extended-taxos library
  */
 function register_taxonomy() {
-	$artwork_projects = register_extended_taxonomy( 'artwork_project', array( 'page', 'artwork') );
+	$artwork_projects = register_extended_taxonomy( 
+		'artwork_project', 
+		array( 'artwork', 'page'),
+		array(
+			'meta_box'	=> 'radio'
+			) 
+		
+	);
 	
 	
 }
