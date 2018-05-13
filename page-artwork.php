@@ -44,37 +44,41 @@ wp_reset_postdata();
 	</div>
 	<div class="off-canvas-content" data-off-canvas-content>
 	  <!-- Your page content lives here -->
-	<header class="header go-c-header" role="header" sticky-container>
+	<header id="go-c-header" class="header go-c-header" role="header" sticky-container>
 		<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>			
 	</header>	  
 	<div class="site-content">
 		
 		<div class="inner-content grid-x grid-padding-y grid-padding-x">
 	
-		    <div class="medium-4 cell js-go-scroll hide-for-small-only" data-sticky-container role="compliementary">
-			
-				<div class="grid-x grid-margin-x grid-margin-y small-up-3 medium-up-3 sticky go-c-artwork"  data-sticky data-anchor="satsang" data-margin-top="6">
-
-				<div class="go-c-artwork__desc cell show-for-large">
-					<a href="#" class="go-c-artwork--top">Top <i class="fas fa-arrow-circle-up"></i></a>
-					<p>Scroll through artwork in this series</p>
-				</div>
-
+		    <div class="medium-4 cell js-go-scroll hide-for-small-only"role="compliementary">
+		    	
+		    	<div  data-sticky-container> 
+		    	
+					<div class="grid-x grid-margin-x grid-margin-y small-up-3 medium-up-3 sticky go-c-artwork"  data-sticky data-anchor="satsang" data-margin-top="5" >
+	
+						<div class="go-c-artwork__desc cell show-for-large">
+							<a href="#" class="go-c-artwork--top">Top <i class="fas fa-arrow-circle-up"></i></a>
+							<p>Scroll through artwork in this series</p>
+						</div>
+	
+						
+						<?php if ($satsang_data->have_posts()) : while ($satsang_data->have_posts()) : $satsang_data->the_post(); ?>
+						
+						<?php 
+							$preview_url	= get_the_post_thumbnail_url( $post, 'thumbnail' ); 
+							$art_id			= 'artwork_preview' . $post->ID;
+						?>
+						<a href="<?php echo '#artwork-'.$post->ID; ?>"  class="cell go-c-artwork__preview-grid artwork_preview <?php echo $art_id ?>" style="background-image:url(<?php echo esc_url( $preview_url ); ?>)">
+						</a>
+					    
+					    <?php endwhile; endif; ?>							
+				    										
+						
+					</div>	
 					
-				<?php if ($satsang_data->have_posts()) : while ($satsang_data->have_posts()) : $satsang_data->the_post(); ?>
-				
-				<?php 
-					$preview_url	= get_the_post_thumbnail_url( $post, 'thumbnail' ); 
-					$art_id			= 'artwork_preview' . $post->ID;
-				?>
-				<a href="<?php echo '#artwork-'.$post->ID; ?>"  class="cell go-c-artwork__preview-grid artwork_preview <?php echo $art_id ?>" style="background-image:url(<?php echo esc_url( $preview_url ); ?>)">
-				</a>
-			    
-			    <?php endwhile; endif; ?>							
-			    										
-					
-				</div>
-				
+		    	</div>
+
 				
 			</div> <!-- end #main -->
 			
