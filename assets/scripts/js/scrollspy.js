@@ -20,10 +20,13 @@
         this.topMenu        = $(element);
         this.topMenuHeight  = this.topMenu.outerHeight()+15;
         this.menuItems      = this.topMenu.find('a');
+        this.header        = $(document).find( '#go-c-header' );
         this.scrollItems    = this.menuItems.map(function(){
                 var item = $( $(this).attr('href') );
                 if(item.length){return item;}
             });
+        
+        //console.log( this.header.outerHeight() );
         
         this.init();
     };
@@ -37,7 +40,7 @@
         this.menuItems.on('focus', function(evt){
             var href       = $(this).attr('href');
             //offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;            
-            var offsetTop  = href === "#" ? 0 : $( href ).position().top;
+            var offsetTop  = href === "#" ? 0 : $( href ).position().top - _this.header.outerHeight();
             
             $('html, body').stop().animate({
                 scrollTop: offsetTop

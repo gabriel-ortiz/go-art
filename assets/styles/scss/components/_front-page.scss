@@ -84,16 +84,22 @@ ul#menu-social-media-menu{
 
 .go-c-front-page__content{
     position: absolute;
-    top: 10%;
-    left: 10%;
     font-family: $raleway;
     padding: 1em;
     box-sizing: border-box;
     background-color: rgba($secondary-color , 0.5);
     color: $white;
+    width: auto;
+    margin: $spacer;
 
+    @include breakpoint(medium){
+        width:  70%;
+    }
     
-    @include breakpoint( medium ){
-        width: 40%;    
+    @include breakpoint( large ){
+        margin: 0;
+        width: 40%;
+        top: 10%;
+        left: 10%;
     }
 }
