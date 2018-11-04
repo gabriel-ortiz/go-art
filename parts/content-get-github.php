@@ -15,7 +15,7 @@
     //if not, make request to github repository
     //https://api.github.com/users/gabrielo-cuc/repos?sort=created
     
-    $url = 'https://api.github.com/users/gabrielo-cuc/repos?sort=created';
+    $url = 'https://api.github.com/users/gabriel-ortiz/repos?sort=created';
     
     if( ! $github_json ){
         $request = wp_remote_get( $url );
